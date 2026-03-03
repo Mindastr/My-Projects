@@ -1,0 +1,269 @@
+# ================================================
+# Git Ignore Configuration
+# Проект: My-Projects
+# Дата: 3 марта 2026
+# ================================================
+
+# ================================================
+# 1. ОСНОВНЫЕ ИСКЛЮЧЕНИЯ - Локальные папки проектов
+# ================================================
+
+# Папки не загружаются на GitHub
+/Python/
+/C++/
+/build/
+/cmake-build-debug/
+/cmake-build-release/
+
+# ================================================
+# 2. КУКИ, ТОКЕНЫ И КОНФИДЕНЦИАЛЬНЫЕ ДАННЫЕ
+# ================================================
+
+# Файлы с конфиденциальными данными
+*.env
+*.env.local
+*.env.*.local
+.env
+.env.production.local
+.env.development.local
+.env.test.local
+
+# Ключи и токены
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+.ssh/
+*.crt
+*.cer
+
+# Куки и сессии
+*.cookie
+*.cookies
+cookies.txt
+session.txt
+*.session
+
+# Файлы конфигурации с паролями
+config.local
+config.private
+*.credentials
+secrets.json
+*.secrets
+
+# ================================================
+# 3. IDE И РЕДАКТОРЫ КОДА
+# ================================================
+
+# JetBrains IDEs (PyCharm, CLion, IntelliJ и т.д.)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Visual Studio
+.vs/
+.vscode/settings.json
+.vscode/launch.json
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Atom
+.atom/
+
+# VS Code
+.DS_Store
+Thumbs.db
+
+# ================================================
+# 4. СИСТЕМНЫЕ ФАЙЛЫ
+# ================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*.swo
+*~
+
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+
+# Linux
+.directory
+
+# ================================================
+# 5. PYTHON - Виртуальные окружения и кеш
+# ================================================
+
+# Виртуальные окружения
+venv/
+ENV/
+env/
+.venv
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# ================================================
+# 6. C/C++ - Артефакты сборки
+# ================================================
+
+# Объектные файлы
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.exe
+*.out
+*.app
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeLists.txt.user
+CMakeUserPresets.json
+cmake_install.cmake
+CTestTestfile.cmake
+_deps
+
+# Ninja
+.ninja_deps
+.ninja_log
+build.ninja
+
+# Otros sistemas de construcción
+*.sln
+*.vcxproj*
+*.cbp
+Makefile
+
+# ================================================
+# 7. NODE.JS И NPM
+# ================================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ================================================
+# 8. DOCKER
+# ================================================
+
+*.dockerfile
+docker-compose.override.yml
+.dockerignore
+
+# ================================================
+# 9. БД И ЛОГИ
+# ================================================
+
+# Базы данных
+*.db
+*.sqlite
+*.sqlite3
+*.mdb
+
+# Логи
+*.log
+logs/
+*.log.*
+
+# ================================================
+# 10. ВРЕМЕННЫЕ И РЕЗЕРВНЫЕ ФАЙЛЫ
+# ================================================
+
+# Временные файлы
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# Замененные файлы
+*.orig
+
+# ================================================
+# 11. АРХИВЫ
+# ================================================
+
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# ================================================
+# ИСКЛЮЧЕНИЯ (что ЗАГРУЖАЕТСЯ на GitHub)
+# ================================================
+
+# Разрешаем загрузку:
+!.github/
+!.gitignore
+!.gitattributes
+!README.md
+!LICENSE
+
