@@ -1,0 +1,5 @@
+string = input("Рядок: ")
+find = input("Знайти: ")
+replace = input("Замінити на: ")
+print(string.replace(find, replace))
+print()

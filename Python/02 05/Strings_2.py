@@ -1,0 +1,5 @@
+string = input("Рядок: ")
+letters = sum(1 for c in string if c.isalpha())
+digits = sum(1 for c in string if c.isdigit())
+print(f"Букв: {letters} Цифр: {digits}")
+print()
