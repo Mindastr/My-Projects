@@ -1,7 +1,11 @@
 file_name = "text.txt"
 
-with open(file_name, "r", encoding="utf-8") as f:
-    lines = f.readlines()
+try:
+    with open(file_name, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+except FileNotFoundError:
+    print("Error")
+    lines = []
 
 max_len = 0
 

@@ -25,7 +25,6 @@ def show_all(students):
     if len(students) == 0:
         print("Список порожній")
         return
-
     for st in students:
         print(st)
 
@@ -35,7 +34,6 @@ def add_student(students):
     name = input("Ім'я: ")
     group = input("Група: ")
     marks = input("Оцінки через пробіл: ")
-
     students.append([surname, name, group, marks])
     save_students(students)
     print("Студента додано")
@@ -44,18 +42,15 @@ def add_student(students):
 def delete_student(students):
     surname = input("Введіть прізвище для видалення: ")
     new_students = []
-
     for st in students:
         if st[0] != surname:
             new_students.append(st)
-
     save_students(new_students)
     print("Видалення виконано")
 
 
 def edit_student(students):
     surname = input("Введіть прізвище для зміни: ")
-
     for st in students:
         if st[0] == surname:
             st[0] = input("Нове прізвище: ")
@@ -65,19 +60,16 @@ def edit_student(students):
             save_students(students)
             print("Інформацію змінено")
             return
-
     print("Студента не знайдено")
 
 
 def search_student(students):
     param = input("Введіть значення для пошуку: ")
-
     found = False
     for st in students:
         if param in st:
             print(st)
             found = True
-
     if not found:
         print("Нічого не знайдено")
 
@@ -99,12 +91,10 @@ def sort_students(students):
     print("1 - за алфавітом")
     print("2 - за середнім балом")
     choice = input("Ваш вибір: ")
-
     if choice == "1":
         students.sort()
     elif choice == "2":
         students.sort(key=lambda x: average_mark(x[3]), reverse=True)
-
     show_all(students)
 
 

@@ -31,3 +31,4 @@ with open(new_file_name, "w", encoding="utf-8") as f:
     f.write("Кількість цифр: " + str(count_digits) + "\n")
 
 print("Готово")
+
